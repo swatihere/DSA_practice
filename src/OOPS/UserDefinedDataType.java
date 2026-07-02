@@ -21,6 +21,8 @@ public class UserDefinedDataType {
         s2.age = 20;
         s2.cgpa = 7.75;
 
+        Student s3 = s1; //s3 is shallow copy of s1 (s3 control s1)
+
         System.out.println(s1.name+" "+s1.age+" "+s1.cgpa); //Method 1 of Printing
         s2.cgpa = 7.95;
         System.out.println(s2.cgpa);
