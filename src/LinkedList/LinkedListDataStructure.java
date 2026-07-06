@@ -95,7 +95,7 @@ class Linkedlist{  //User Defined Data Structure
             return;
         }
         Node temp = head;
-        for(int i = 0 ; i<= idx-1 ; i ++){
+        for(int i = 0 ; i < idx-1 ; i ++){
             temp = temp.next;
         }
         temp.next = temp.next.next; //delete
@@ -105,7 +105,7 @@ class Linkedlist{  //User Defined Data Structure
         size--;
     }
 
-    void display(){
+     void display(){
         if(head == null){
             return;
         }
