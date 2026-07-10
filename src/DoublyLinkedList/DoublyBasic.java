@@ -4,6 +4,7 @@ class DNode{
     DNode next;
     DNode prev;
     DNode child;
+    DNode random;
 
     DNode(int val){
         this.val = val;
