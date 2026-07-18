@@ -20,7 +20,7 @@ class CircularQueue{
         size++;
     }
     int remove(){                             //REMOVE
-        if(size == arr.length){
+        if(size == 0){
             System.out.println("QUEUE IS EMPTY");
             return -1;
         }
@@ -33,7 +33,7 @@ class CircularQueue{
         return frontVal;
     }
     int peek(){                                 //PEEK
-        if(size == arr.length){
+        if(size == 0){
             System.out.println("QUEUE IS EMPTY");
             return -1;
         }
@@ -44,7 +44,7 @@ class CircularQueue{
             return;
         }
         if(f >= r){
-            for(int i = f; i <= arr.length ; i++){  //print from ffront to end
+            for(int i = f; i < arr.length ; i++){  //print from ffront to end
                 System.out.print(arr[i]+" ");
             }
             for(int i = 0; i < r ; i++){   //start to rear-1
@@ -52,7 +52,7 @@ class CircularQueue{
             }
         }
         else{
-            for(int i = f; i <= r ; i++){
+            for(int i = f; i < r ; i++){
                 System.out.print(arr[i]+" ");
             }
         }
@@ -62,12 +62,23 @@ class CircularQueue{
 
 public class ImplementationViaCircularArray {
     public static void main(String[] args) {
-        CircularQueue q = new CircularQueue(5);
+        CircularQueue q = new CircularQueue(4);
         q.add(10);
         q.add(20);
         q.add(30);
         q.add(40);
         q.display();
+
+        System.out.println(q.remove());
+        q.display();
+
+        q.add(50);
+        q.display();
+
+        int[] a =q.arr;
+        for(int ele : a){
+            System.out.print(ele+" ");
+        }
     }
 }
 
